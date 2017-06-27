@@ -1,0 +1,17 @@
+version: '2'
+
+services:
+  collector:
+    build:
+      context: ./collector
+      dockerfile: Dockerfile
+
+  prom:
+    image: prom/prometheus
+    volumes:
+      - ./prom/prometheus.yml:/etc/prometheus/prometheus.yml
+      - ./prom-data:/prometheus
+    links:
+      - collector 
+    ports:
+      - 9090:9090
