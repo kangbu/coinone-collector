@@ -1,7 +1,7 @@
 # coinone-collector
 
 ## Description
-This program is based on [Coinone API](http://doc.coinone.co.kr/).
+This program collects virtual currency data and store them to prometheus as metrics. You can see metrics on [Grafana](https://grafana.com/) dashboard. This is based on [Coinone API](http://doc.coinone.co.kr/).
 
 ## Prerequirements
 * [Docker](https://www.docker.com/)
@@ -14,8 +14,14 @@ $ cd coinone-collector
 $ docker-compose up
 ```
 
+## Available Currency
+* Bitcoin
+* Ethereum
+* Ethereum Classic
+* Ripple
+
 ## References
-Coinone: https://coinone.co.kr/
-Prometheus: https://prometheus.io/
-Grafana: https://grafana.com/
-Docker: https://www.docker.com/
+* Coinone: https://coinone.co.kr/ (Thanks!)
+* Prometheus: https://prometheus.io/
+* Grafana: https://grafana.com/
+* Docker: https://www.docker.com/
