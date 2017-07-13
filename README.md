@@ -7,8 +7,10 @@ This program is based on [Coinone API](http://doc.coinone.co.kr/).
 * [Docker](https://www.docker.com/)
 
 ## Usage
-Very simple! Just input one line command.
+Very simple! Just execute the program using docker-compose.
 ```shell
+$ git clone https://github.com/odg0318/coinone-collector
+$ cd coinone-collector
 $ docker-compose up
 ```
 
