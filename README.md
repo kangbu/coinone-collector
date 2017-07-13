@@ -14,7 +14,7 @@ $ cd coinone-collector
 $ docker-compose up
 ```
 
-## Available Currency
+## Available Currencies
 * Bitcoin
 * Ethereum
 * Ethereum Classic
