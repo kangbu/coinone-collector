@@ -1,7 +1,7 @@
 # coinone-collector
 
 ## Description
-This program collects virtual currency data and store them to prometheus as metrics. You can see metrics on [Grafana](https://grafana.com/) dashboard. This is based on [Coinone API](http://doc.coinone.co.kr/).
+This program collects virtual currency data and store them to [Prometheus](https://prometheus.io) as metrics. You can see metrics on [Grafana](https://grafana.com/) dashboard. This is based on [Coinone API](http://doc.coinone.co.kr/).
 
 ## Prerequirements
 * [Docker](https://www.docker.com/)
