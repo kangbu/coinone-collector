@@ -7,3 +7,4 @@ scrape_configs:
 
     static_configs:
       - targets: ['collector:8000']
+      - targets: ['chat:9200']

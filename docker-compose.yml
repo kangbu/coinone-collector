@@ -6,13 +6,19 @@ services:
       context: ./collector
       dockerfile: Dockerfile
 
+  chat:
+    build:
+      context: ./chat
+      dockerfile: Dockerfile
+
   prom:
     image: prom/prometheus
     volumes:
       - ./prom/prometheus.yml:/etc/prometheus/prometheus.yml
       - ./prom-data:/prometheus
     links:
-      - collector 
+      - collector
+      - chat 
     ports:
       - 9090:9090
   
