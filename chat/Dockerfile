@@ -1,11 +1,10 @@
-FROM golang:1.8
+FROM node:8.1 
 
-WORKDIR /go/src/app
+WORKDIR /app
 COPY app . 
 
-RUN go-wrapper download
-RUN go-wrapper install
+RUN npm install
 
 EXPOSE 9200 
 
-CMD ["go-wrapper", "run", "app"]
+CMD ["npm", "start"]

@@ -1,0 +1,12 @@
+{
+    "name": "chat-collector",
+    "version": "0.0.0",
+    "dependencies": {
+        "socket.io-client": "2.0.3",
+        "prom-client": "10.0.2",
+        "express": "4.15.3"
+    },
+    "scripts": {
+        "start": "node server.js"
+    }
+}
