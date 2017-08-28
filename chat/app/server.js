@@ -12,7 +12,7 @@ promServer.get('/metrics', (req, res) => {
 prom.collectDefaultMetrics()
 promServer.listen(9200)
 
-console.log('Prmetheus server is listening 9200 port...'
+console.log('Prmetheus server is listening 9200 port...')
 
 socket = io('https://push.coinone.co.kr/chat', {transports: ['websocket']});
 

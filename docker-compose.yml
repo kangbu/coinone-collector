@@ -5,22 +5,26 @@ services:
     build:
       context: ./collector
       dockerfile: Dockerfile
+    restart: always
 
   chat:
     build:
       context: ./chat
       dockerfile: Dockerfile
+    restart: always
 
   prom:
     image: prom/prometheus
+    command: -config.file=/etc/prometheus/prometheus.yml -storage.local.retention=2160h
     volumes:
       - ./prom/prometheus.yml:/etc/prometheus/prometheus.yml
-      - ./prom-data:/prometheus
+      - ./prom-data:/prometheus/data
     links:
       - collector
       - chat 
     ports:
       - 9090:9090
+    restart: always
   
   grafana:
     image: grafana/grafana 
@@ -30,3 +34,4 @@ services:
       - prom 
     ports:
       - 3000:3000
+    restart: always

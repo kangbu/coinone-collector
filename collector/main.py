@@ -43,17 +43,19 @@ def main():
     while True:
         try:
             data = load_data()
+
+            for currency in ['btc', 'eth', 'etc', 'xrp']:
+                if currency not in data:
+                    continue
+
+                ticker = Ticker(data[currency])
+                ticker.metric()
+
         except:
+            time.sleep(1)
             continue
 
-        for currency in ['btc', 'eth', 'etc', 'xrp']:
-            if currency not in data:
-                continue
-
-            ticker = Ticker(data[currency])
-            ticker.metric()
-
-        time.sleep(10)
+        time.sleep(20)
 
 
 if __name__ == '__main__':
